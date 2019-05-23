@@ -4,6 +4,7 @@
 </template>
 
 <script>
+  import { get } from "../../utils";
 
 export default {
   data () {
@@ -16,11 +17,14 @@ export default {
   },
 
   methods: {
+    async getData() {
+      const data = await get("index/index.json");
+      console.log(data)
+    },
   },
-
-  created () {
-
-  }
+  mounted() {
+    this.getData();
+  },
 }
 </script>
 
