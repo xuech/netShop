@@ -36,7 +36,11 @@ function request(url, method, data, header = {}) {
       },
       success: function(res) {
         wx.hideLoading();
-        resolve(res.data)
+        if (res.data.code === "200"){
+          resolve(res.data.data)
+        } else {
+          console.log('网络请求错误')
+        }
       },
       fail: function(err) {
         wx.hideLoading();
