@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/main",
-    "pages/topic/main",
     "pages/category/main",
     "pages/cart/main",
     "pages/me/main"
@@ -23,12 +22,6 @@
         "pagePath": "pages/index/main",
         "iconPath": "static/tabs/ic_menu_choice_nor.png",
         "selectedIconPath": "static/tabs/ic_menu_choice_pressed.png"
-      },
-      {
-        "text": "专题",
-        "pagePath": "pages/topic/main",
-        "iconPath": "static/tabs/ic_menu_topic_nor.png",
-        "selectedIconPath": "static/tabs/ic_menu_topic_pressed.png"
       },
       {
         "pagePath": "pages/category/main",

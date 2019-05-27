@@ -90,15 +90,16 @@ export default {
       this.url3 = arr3.picUrls[0]
       // console.log(this.operationImg)
       this.operationImg = data.operationCfg;
-      this.categoryItems = data.categoryItems;
       this.focus = data.focus;
       this.kingKongArea = data.kingKongArea
     },
     async rcmd(){
       const rcmddata = await get("rcmd/index.json");
-      rcmddata.rcmdItemList.shift()
-      console.log(rcmddata.rcmdItemList)
-      this.categoryItems = rcmddata.rcmdItemList
+      let list = rcmddata.rcmdItemList.filter(val=>{
+        return val.type === 1
+      })
+      console.log(list)
+      this.categoryItems = list
     }
   },
   mounted() {

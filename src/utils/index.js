@@ -60,7 +60,36 @@ export function get(url, data) {
 export function post(url, data) {
   return request(url, 'POST', data)
 }
+export function getOpenid() {
+  wx.login({
+    success: res => {
+      if (res.code) {
+        https.get()
+        // const param = {
+        //   code: res.code,
+        //   encryptedData: res_user.encryptedData,
+        //   iv: res_user.iv
+        // };
+        // console.log(param)
+        // https.post("https://app.yan2piao.com/mis-api/user/wx_openid", param).then(res => {
+        //   console.log(res)
+        //   // wx.setStorageSync('openId', res);
+        // }).catch(err => {
+        //
+        // })
+      } else {
+        console.log('登录失败！' + res.errMsg)
+      }
 
+    },
+    fail: (err) => {
+      console.log(err)
+    },
+    complete: (c) => {
+      // console.log("comp",c)
+    }
+  });
+}
 
 export default {
   formatNumber,
