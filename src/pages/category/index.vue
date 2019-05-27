@@ -48,6 +48,7 @@
         const data = await get("list/category.json");
         console.log(data)
         this.categoryList = data.categoryList
+        this.selectitem(this.categoryList[0],0)
       },
       selectitem(item, index){
         this.nowIndex = index;
