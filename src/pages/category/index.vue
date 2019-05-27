@@ -15,10 +15,10 @@
         <span>—</span>
       </div>
       <div class="bottom">
-        <div v-for="(category,index) in categoryGroupList" :key="category.id">
+        <div  v-for="(category,index) in categoryGroupList" :key="category.id">
           <div class="category">{{category.name}}</div>
           <div style="display: flex;flex-wrap: wrap;">
-            <div class="item" v-for="(item,index2) in category.categoryList" :key="item.id">
+            <div class="item" @click="categoryEvent(item)" v-for="(item,index2) in category.categoryList" :key="item.id">
               <img :src="item.bannerUrl" alt="">
               <span>{{item.name}}</span>
             </div>
@@ -57,6 +57,12 @@
       },
       categoryItemList(){
 
+      },
+      categoryEvent(item) {
+        let data = JSON.stringify(item)
+        wx.navigateTo({
+          url: "../categoryList/main?params=" + data
+        });
       }
     },
     mounted() {
