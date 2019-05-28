@@ -3,7 +3,9 @@
     "pages/index/main",
     "pages/category/main",
     "pages/cart/main",
-    "pages/me/main"
+    "pages/me/main",
+    "pages/categoryList/main",
+    "pages/webview/main"
   ],
   "window": {
     "backgroundTextStyle": "light",

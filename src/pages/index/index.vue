@@ -9,7 +9,7 @@
     <div class="swiper">
       <swiper class="swiper-container" indicator-dots="true" autoplay="true" interval="3000" circular="true" duration="500">
         <block v-for="(item, index) in focus " :key="index">
-          <swiper-item class="swiper-item">
+          <swiper-item @click="swiperEvent(item)" class="swiper-item">
             <image :src="item.img" class="slide-image" />
           </swiper-item>
         </block>
@@ -100,6 +100,12 @@ export default {
       })
       console.log(list)
       this.categoryItems = list
+    },
+    swiperEvent(item){
+      console.log(item.content)
+      wx.navigateTo({
+        url: "../webview/main?url=" + item.content
+      });
     }
   },
   mounted() {
