@@ -1,0 +1,277 @@
+.content{
+  background-color: rgb(241,241,241);
+  .swiper {
+    width: 750rpx;
+    height: 750rpx;
+    position: relative;
+    background-color: white;
+
+    .swiper-container {
+      width: 750rpx;
+      height: 750rpx;
+
+      image {
+        width: 750rpx;
+        height: 750rpx;
+      }
+    }
+  }
+  .desc{
+    width: 100%;
+    height: 280rpx;
+    padding: 30rpx;
+    background-color: white;
+    .topdesc{
+      margin-bottom: 30rpx;
+      p:nth-child(1) {
+        font-weight: bold;
+      }
+      p:nth-child(2) {
+        font-size: 32rpx;
+        color: #bbbec4;
+      }
+
+    }
+    .middesc{
+      display: flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom: 20rpx;
+      .price{
+        display: flex;
+        align-items:center;
+        p:nth-child(1) {
+          color: rgb(169,13,37);
+          font-weight: bold;
+          font-size: 48rpx;
+        }
+        p:nth-child(2) {
+          margin-left: 15rpx;
+          color: #bbbec4;
+          font-size: 28rpx;
+          text-decoration:line-through;
+        }
+      }
+      .back{
+        display: flex;
+        p:nth-child(1) {
+          color: #bbbec4;
+          font-size: 28rpx;
+        }
+        p:nth-child(2) {
+          font-size: 28rpx;
+          color: rgb(169,13,37);
+          margin-right: 60rpx;
+        }
+      }
+    }
+    .tag{
+      display: flex;
+      .tagBtn{
+        font-size: 24rpx;
+        color: rgb(202,159,109);
+        margin-right: 10rpx;
+        border: 1px solid rgb(202,159,109);
+        padding: 5rpx;
+        border-radius: 5rpx;
+      }
+    }
+  }
+  .chose{
+    margin-top: 20rpx;
+    background-color: white;
+    div{
+      padding: 30rpx;
+      border-bottom: 1px solid rgb(237,237,237);
+      display: flex;
+      justify-content:space-between;
+      color: rgb(104,104,104);
+      font-size: 28rpx;
+    }
+    div:nth-child(4) {
+      height: 100rpx;
+      border-bottom:none;
+      display: flex;
+      align-items:center;
+      .server{
+        width: 460rpx;
+        height: 100%;
+        display: flex;
+        flex-wrap:wrap;
+        align-items:center;
+        border-bottom:none;
+        div{
+          background: url('http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/servicePolicyRed-518d32d74b.png') 0 center no-repeat;
+          background-size: 10rpx;
+          height:1rpx;
+          font-size: 25rpx;
+          border-bottom:none;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .comment{
+    margin-top: 20rpx;
+    background-color: white;
+    .commentTitle{
+      display: flex;
+      justify-content: space-between;
+      color: rgb(104,104,104);
+      font-size: 28rpx;
+      padding: 30rpx;
+      border-bottom: 1rpx solid rgb(237,237,237);
+    }
+    .user{
+      padding: 30rpx;
+      .icon{
+        display: flex;
+        align-items: center;
+        img{
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+        }
+        p{
+          color: rgb(104,104,104);
+          font-size: 28rpx;
+          margin-left: 20rpx;
+        }
+
+      }
+      .commentTime {
+        color: rgb(168,168,168);
+        font-size: 24rpx;
+      }
+      .content{
+        background-color: white;
+        color: rgb(104,104,104);
+        font-size: 28rpx;
+        margin: 30rpx 0;
+      }
+    }
+
+  }
+  .attr{
+    margin-top: 20rpx;
+    background-color: white;
+    color: rgb(104,104,104);
+    p:nth-child(1){
+      padding: 30rpx;
+      font-size: 28rpx;
+    }
+    .cellAttr{
+      height: 100rpx;
+      font-size: 24rpx;
+      display: flex;
+      align-items: center;
+      //justify-content: flex-start;
+      border-top: 1px dotted rgb(168,168,168);
+      div{
+        flex: 0 0 100rpx;
+        padding: 30rpx;
+        color: rgb(168,168,168);
+      }
+      p{
+        flex: 1
+      }
+    }
+    .lastCell{
+      height:160rpx;
+    }
+
+  }
+  .picDiv{
+    margin-top: 20rpx;
+    background-color: white;
+    /deep/.wxParse .p {
+      margin:-0.6em 0;
+    }
+
+  }
+  .bottom-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    background: #fff;
+    z-index: 897;
+    font-size: 28rpx;
+    border-top: 1rpx solid rgb(237,237,237);
+    div:nth-child(1) {
+      height: 100rpx;
+      width: 162rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .backHome {
+        display: block;
+        height: 44rpx;
+        width: 44rpx;
+        background: url('../../../static/images/ic_menu_choice_nor.png') no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    div:nth-child(2) {
+      height: 100rpx;
+      width: 162rpx;
+      border: 1rpx solid #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .car {
+        position: relative;
+        height: 60rpx;
+        width: 60rpx;
+
+        span {
+          height: 28rpx;
+          width: 28rpx;
+          z-index: 10;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: #b4282d;
+          text-align: center;
+          font-size: 18rpx;
+          color: #fff;
+          line-height: 28rpx;
+          border-radius: 50%;
+        }
+
+        img {
+          display: block;
+          height: 44rpx;
+          width: 44rpx;
+          position: absolute;
+          top: 10rpx;
+          left: 0;
+        }
+      }
+    }
+    div:nth-child(3) {
+      height: 100rpx;
+      line-height: 96rpx;
+      flex: 1;
+      text-align: center;
+      color: rgb(104,104,104);
+      border-top: 1rpx solid #f4f4f4;
+      border-bottom: 1rpx solid #f4f4f4;
+    }
+    div:nth-child(4) {
+      border: 1rpx solid #b4282d;
+      background: #b4282d;
+      float: left;
+      height: 100rpx;
+      line-height: 96rpx;
+      flex: 1;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}

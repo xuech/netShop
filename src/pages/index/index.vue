@@ -33,7 +33,7 @@
         为你推荐
       </div>
       <div class="content">
-        <div class="brandItem" v-if="categoryItems.length>0" v-for="(item, index) in categoryItems" :key="index">
+        <div class="brandItem" v-if="categoryItems.length>0" v-for="(item, index) in categoryItems" :key="index" @click="goodsEvent(item.id)">
           <img :src="item.categoryItem.primaryPicUrl" alt="">
           <div style="background-color: antiquewhite"><p class="simpleDesc">{{item.categoryItem.simpleDesc}}</p></div>
           <p>{{item.categoryItem.name}}</p>
@@ -105,6 +105,11 @@ export default {
       console.log(item.content)
       wx.navigateTo({
         url: "../webview/main?url=" + item.content
+      });
+    },
+    goodsEvent(id){
+      wx.navigateTo({
+        url: "../goods/main?id=" + id
       });
     }
   },
