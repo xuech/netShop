@@ -9,7 +9,7 @@
       <p>{{selecteItem.frontName}}</p>
     </div>
     <div class="list" v-if="goodsList.length!==0">
-      <div class="brandItem" v-for="(item, index) in goodsList" :key="index">
+      <div @click="goodsEvent(item.id)" class="brandItem" v-for="(item, index) in goodsList" :key="index">
         <img :src="item.primaryPicUrl" alt="">
         <div style="background-color: antiquewhite"><p class="simpleDesc">{{item.simpleDesc}}</p></div>
         <p>{{item.name}}</p>
@@ -76,6 +76,11 @@
         });
         console.log(data)
         this.goodsList = data.itemList
+      },
+      goodsEvent(id){
+        wx.navigateTo({
+          url: "../goods/main?id=" + id
+        });
       }
 
     },

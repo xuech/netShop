@@ -37,10 +37,13 @@
           <img :src="item.categoryItem.primaryPicUrl" alt="">
           <div style="background-color: antiquewhite"><p class="simpleDesc">{{item.categoryItem.simpleDesc}}</p></div>
           <p>{{item.categoryItem.name}}</p>
-          <div class="price">
+          <div v-if="item.categoryItem.activityPrice" class="price">
             <p>¥{{item.categoryItem.activityPrice}}</p>
             <p>¥{{item.categoryItem.retailPrice}}</p>
             <p>减{{item.categoryItem.retailPrice-item.categoryItem.activityPrice}}元</p>
+          </div>
+          <div v-else  class="price">
+            <p>¥{{item.categoryItem.retailPrice}}</p>
           </div>
         </div>
       </div>

@@ -15,8 +15,11 @@
         <p>{{dataSource.simpleDesc}}</p>
       </div>
       <div class="middesc">
-        <div class="price">
+        <div v-if="dataSource.activityPrice" class="price">
           <p>¥{{dataSource.activityPrice}}</p>
+          <p>¥{{dataSource.retailPrice}}</p>
+        </div>
+        <div v-else  class="price">
           <p>¥{{dataSource.retailPrice}}</p>
         </div>
         <div v-if="dataSource.itemRewardVO" class="back">
@@ -145,10 +148,14 @@
 
       },
       shopCar(){},
-      buy(){}
+      buy(){},
+      initData(){
+        this.gallery = []
+      }
     },
     mounted () {
       this.getData(this.$root.$mp.query.id);
+      this.initData()
     },
     //mpvue 不支持
     // filters: {
