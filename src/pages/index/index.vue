@@ -40,7 +40,7 @@
           <div v-if="item.categoryItem.activityPrice" class="price">
             <p>¥{{item.categoryItem.activityPrice}}</p>
             <p>¥{{item.categoryItem.retailPrice}}</p>
-            <p>减{{item.categoryItem.retailPrice-item.categoryItem.activityPrice}}元</p>
+            <p>减{{(item.categoryItem.retailPrice*10 - item.categoryItem.activityPrice * 10)/10}}元</p>
           </div>
           <div v-else  class="price">
             <p>¥{{item.categoryItem.retailPrice}}</p>
