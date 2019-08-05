@@ -9,11 +9,11 @@
       <div v-if="focusBanner" class="banner">
         <img :src="focusBanner.picUrl"/>
       </div>
-      <div class="title">
-        <span>—</span>
-        <span>分类</span>
-        <span>—</span>
-      </div>
+      <!--<div class="title">-->
+        <!--<span>—</span>-->
+        <!--<span>分类</span>-->
+        <!--<span>—</span>-->
+      <!--</div>-->
       <div class="bottom">
         <div  v-for="(category,index) in categoryGroupList" :key="category.id">
           <div class="category">{{category.name}}</div>

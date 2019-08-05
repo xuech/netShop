@@ -9,7 +9,7 @@
   export default {
     data () {
       return {
-        webViewUrl: 'https://www.baidu.com',
+        webViewUrl: 'https://act.you.163.com/act/pub/RxRWDz4F3p.html',
       }
     },
     mounted () {

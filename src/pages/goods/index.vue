@@ -25,7 +25,7 @@
         <div v-if="dataSource.itemRewardVO" class="back">
           <p>{{dataSource.itemRewardVO.rewardText}}</p>
           <p>¥{{dataSource.itemRewardVO.rewardAmount}}</p>
-          <i-icon type="feedback" size="28"/>
+          <!--<i-icon type="feedback" size="28"/>-->
         </div>
       </div>
       <div class="tag" v-if="tagList">
