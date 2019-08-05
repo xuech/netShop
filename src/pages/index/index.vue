@@ -1,8 +1,8 @@
 <template>
   <div class="index">
     <div class="search">
-      <div>
-        <input class="searchInput" type="search" placeholder="搜索商品"/>
+      <div @click="searchEvent">
+        <input class="searchInput" type="search" placeholder="搜索商品" autofocus="false"/>
         <span class="icon"></span>
       </div>
     </div>
@@ -35,7 +35,7 @@
       <div class="content">
         <div class="brandItem" v-if="categoryItems.length>0" v-for="(item, index) in categoryItems" :key="index" @click="goodsEvent(item.id)">
           <img :src="item.categoryItem.primaryPicUrl" alt="">
-          <div style="background-color: antiquewhite"><p class="simpleDesc">{{item.categoryItem.simpleDesc}}</p></div>
+          <div style="background-color: rgb(239,235,224)"><p class="simpleDesc">{{item.categoryItem.simpleDesc}}</p></div>
           <p>{{item.categoryItem.name}}</p>
           <div v-if="item.categoryItem.activityPrice" class="price">
             <p>¥{{item.categoryItem.activityPrice}}</p>
@@ -113,6 +113,11 @@ export default {
     goodsEvent(id){
       wx.navigateTo({
         url: "../goods/main?id=" + id
+      });
+    },
+    searchEvent(){
+      wx.navigateTo({
+        url: "../search/main"
       });
     }
   },

@@ -60,7 +60,7 @@
   .imageTop{
     background-color: white;
     width: 100%;
-    height: 90px;
+    height: 140rpx;
     img{
       padding-left:5%;
       width: 90%;
@@ -92,30 +92,30 @@
     .content{
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      //justify-content: space-between;
       flex-wrap: wrap;
       .brandItem{
-        width: 330rpx;
-        margin: 20rpx;
+        width: 346rpx;
+        margin: 0 0 20rpx 20rpx;
         display: flex;
         flex-direction: column;
         border:1px solid lightgray;
-        border-radius: 2px;
+        border-radius: 6px;
         img{
           width: 100%;
           height: 300rpx;
           background-color: #f3f3f3
         }
         .simpleDesc{
-          font-size: 28rpx;
-          color: goldenrod;
+          //font-size: 18rpx;
+          color: rgb(177,169,147);
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
         }
         p{
           margin: 10rpx;
-          font-size: 30rpx;
+          font-size: 24rpx;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
@@ -123,7 +123,7 @@
         .price{
           display: flex;
           p:nth-child(1) {
-            color: red;
+            color: rgb(176,114,119);
           }
           p:nth-child(2) {
             text-decoration:line-through;
