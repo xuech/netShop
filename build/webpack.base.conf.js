@@ -114,6 +114,11 @@ let baseWebpackConfig = {
         from: path.resolve(__dirname, '../static'),
         to: path.resolve(config.build.assetsRoot, './static'),
         ignore: ['.*']
+      },
+      {
+        from: resolve('node_modules/vant-weapp/dist'),
+        to: resolve('dist/wx/vant-weapp/dist'),
+        ignore: ['.*']
       }
     ])
   ]
