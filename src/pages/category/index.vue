@@ -61,7 +61,7 @@
       categoryEvent(item) {
         let data = JSON.stringify(item)
         wx.navigateTo({
-          url: "../categoryList/main?params=" + data
+          url: "../pA/categoryList/main?params=" + data
         });
       }
     },

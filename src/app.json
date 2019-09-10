@@ -4,7 +4,6 @@
     "pages/category/main",
     "pages/cart/main",
     "pages/me/main",
-    "pages/categoryList/main",
     "pages/webview/main",
     "pages/goods/main",
     "pages/search/main"
@@ -54,5 +53,14 @@
     "van-col": "vant-weapp/dist/col/index",
     "van-field": "vant-weapp/dist/field/index",
     "van-stepper": "vant-weapp/dist/stepper/index"
-  }
+  },
+  "subPackages": [
+    {
+      "root": "pages/pA",
+      "pages": [
+        "package/main",
+        "categoryList/main"
+      ]
+    }
+  ]
 }
