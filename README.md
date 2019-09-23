@@ -1,5 +1,9 @@
 # net-shop
 
+### 微信小程序开发实践
+技术栈： mpvue+vant组合
+注意点：https://juejin.im/post/5d6e435de51d4561ad654910
+
 > A Mpvue project
 
 ## Build Setup
